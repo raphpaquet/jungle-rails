@@ -1,2 +1,47 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<section class="admin-dashboard-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+
+  <h3>Store Stats</h3>
+
+<div class="row">
+
+  <!-- Product card -->
+  <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                      <%= link_to 'Product Count', controller: 'admin/products' %></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @products_count %></div>
+                  </div>
+                  <div class="col-auto">
+                      <i class=""></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Category card -->
+  <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-success shadow h-100 py-2">
+          <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                      <%= link_to 'Category Count', controller: 'admin/products' %></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><%= @categories_count %></div>
+                  </div>
+                  <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
