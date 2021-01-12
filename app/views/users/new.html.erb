@@ -1,26 +1,28 @@
 <h1>Signup!</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+  <div class="form-group">
+  <%= f.label :last_name %>
+  <%= f.text_field :lastname, autofocus: true %>
+</div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
 
-  <form class="signupForm">
-
-  <label for="name">First name</label><br><%= f.text_field :first_name %><br>
-
-  <label for="name">Last name</label><br><%= f.text_field :last_name %><br>
-
-  <label for="email">Email</label><br><%= f.text_field :email %><br>
-
-  <label for="password">Password</label><br><%= f.password_field :password %><br>
-
-  <label for="confirmPassword">Confirm password</label><br><%= f.password_field :password_confirmation %><br>
-
-</form>
-
-</div><!-- end column 2 contact form -->
-
-<div class="col_4">
-<br>
-<%= f.submit "Create account" %>
-
-
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit "Sign up!", class: 'btn btn-primary' %>
+  </div>
 <% end %>
