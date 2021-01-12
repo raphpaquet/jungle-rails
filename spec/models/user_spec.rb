@@ -65,6 +65,14 @@ RSpec.describe User, type: :model do
       )
       end 
 
-    it 
+    it "shouldn't mind the white space in email" do
+      @user.email = ' email@email.com '
+      expect(@user).to be_valid
+    end
+    
+    it "shouldn't mind the letter casing in email" do 
+      @user.email = 'EmAiL@email.Com'
+      expect(@user).to be_valid
+    end 
   end 
 end
