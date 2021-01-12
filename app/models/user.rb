@@ -12,7 +12,6 @@ class User < ActiveRecord::Base
       @user = user
     else 
       @user = nil
-      flash[:error] = "Something went wrong. Sorry!"
     end 
   end 
 end
