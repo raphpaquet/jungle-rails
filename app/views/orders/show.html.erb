@@ -5,14 +5,14 @@
     <div class="order-summary jumbotron">
       <h4>Thank you for your order!</h4>
     </div>
-    <h1>Order #<%= @order.id %> summary</h1>
+    <h1>Order <%= @order.id %> summary</h1>
   </header>
 
   <div class="panel panel-default items">
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th colspan="2">Product</th>
+        <th colspan="2">Products</th>
         <th>Unit Price</th>
         <th>Quantity</th>
         <th>Price</th>
@@ -40,7 +40,7 @@
     </div>
     
     <div class="alert alert-success" role="alert">
-    We sent you a confirmation email at <%= @order.email %>!
+    We sent you a confirmation email at <%= current_user.email %>!
     </div>
 
  
