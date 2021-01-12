@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    cookies.delete :cart
     redirect_to '/login'
-
   end 
 end 
