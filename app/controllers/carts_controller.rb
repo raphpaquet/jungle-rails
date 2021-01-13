@@ -1,15 +1,17 @@
 class CartsController < ApplicationController
   
-  # before_filter :authorize
+  before_filter :authorize
 
   def show
   end
 
   def add_item
+    if product.quantity >= 1
     product_id = params[:product_id].to_s
     modify_cart_delta(product_id, +1)
 
     redirect_to :back
+    end 
   end
 
   def remove_item
